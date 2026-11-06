@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+:root{--pink:#f27b9d;--deep:#b94c70;--ink:#573d46;--cream:#fff8f3}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 15%,#fff 0,transparent 32%),linear-gradient(135deg,#fff4ed,#ffe4ec 55%,#fff0e8);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.22;background-image:radial-gradient(#e99bb0 1px,transparent 1px);background-size:24px 24px}
+main{min-height:calc(100vh - 45px);display:grid;place-items:center;padding:30px 18px}
+.screen{display:none;width:min(100%,680px);text-align:center;padding:36px 22px;animation:arrive .65s ease both}
+.screen.active{display:block}
+@keyframes arrive{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.eyebrow{font-size:10px;letter-spacing:3px;font-weight:700;color:#b67b89;margin:0 0 18px}
+h1{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(32px,7vw,54px);line-height:1.15;margin:0 auto 14px;max-width:620px}
+.script{font-style:italic;color:var(--deep);font-size:clamp(42px,9vw,70px)}
+.sub{font-size:14px;line-height:1.8;color:#947781;max-width:430px;margin:0 auto 28px}
+.heart-button{border:0;background:transparent;font-size:clamp(76px,17vw,120px);cursor:pointer;filter:drop-shadow(0 12px 18px #e98ca866);animation:beat 1.4s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.12)}30%{transform:scale(1)}45%{transform:scale(1.08)}}
+.hint{font-size:11px;letter-spacing:1.5px;color:#b78c97;margin-top:10px}
+.primary{border:0;border-radius:30px;padding:14px 25px;background:linear-gradient(100deg,#ed83a2,#d96f91);color:white;font:600 13px 'DM Sans';letter-spacing:.3px;cursor:pointer;box-shadow:0 9px 22px #d8799840;transition:.2s}
+.primary:hover{transform:translateY(-2px);box-shadow:0 12px 25px #d8799855}
+.primary span{margin-left:8px}
+.gift-button{display:block;border:0;background:transparent;cursor:pointer;margin:18px auto 4px;position:relative}
+.gift-emoji{display:block;font-size:105px;filter:drop-shadow(0 10px 12px #b76a5c30);transition:.5s}
+.gift-bow{display:block;font-size:32px;margin-bottom:-20px;position:relative;z-index:1}
+.gift-button.open .gift-emoji{transform:rotate(-12deg) scale(1.2);opacity:.5}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px auto 26px;max-width:500px}
+.gallery img{width:100%;aspect-ratio:1/1.15;object-fit:cover;border:7px solid #fff;border-radius:5px;box-shadow:0 5px 15px #9f63701c;transform:rotate(var(--r, -2deg))}
+.gallery img:nth-child(2n){--r:2deg}.gallery img:nth-child(3n){--r:-1deg}
+.envelope{border:0;background:transparent;cursor:pointer;display:flex;flex-direction:column;align-items:center;margin:20px auto 14px}
+.envelope span{font-size:100px;transition:.3s}.envelope:hover span{transform:scale(1.1) rotate(-5deg)}
+.envelope small{font-size:11px;color:#b78c97;letter-spacing:1px}
+.letter-card{background:#fffdf9;text-align:left;padding:24px 25px;border-radius:8px;box-shadow:0 12px 35px #a46d7822;max-width:480px;margin:18px auto;color:#725963;font-family:'Playfair Display',serif;font-size:15px;line-height:1.85;animation:arrive .6s}
+.letter-card .sign{text-align:right;color:var(--deep);font-style:italic}
+.audio-card{max-width:400px;margin:25px auto;background:#fffaf8;border:1px solid #f8dce3;padding:25px;border-radius:18px;box-shadow:0 12px 30px #a46d7818}
+.audio-icon{font-size:36px}.audio-card p{font-family:'Playfair Display';font-size:20px}
+audio{width:100%;height:40px}.audio-card small{display:block;color:#a88a92;font-size:10px;margin-top:10px}
+.final-heart{font-size:64px;animation:beat 1.4s infinite;margin-bottom:15px}
+.signature{font-family:'Playfair Display';font-style:italic;color:var(--deep);font-size:22px;margin:24px}
+.hidden{display:none!important}
+footer{text-align:center;height:45px;font-size:9px;letter-spacing:2px;color:#b78c97;padding:14px}
+@media(max-width:480px){main{padding:12px}.screen{padding:28px 10px}.gallery{gap:7px}.gallery img{border-width:5px}.letter-card{padding:20px;font-size:14px}}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffe8ed">
+  <title>A Little Surprise For You 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sparkles" aria-hidden="true"></div>
+  <main>
+    <section class="screen active" id="welcome">
+      <p class="eyebrow">A LITTLE SOMETHING FOR YOU</p>
+      <h1>Hey, you…</h1>
+      <p class="sub">I made something. Just for you.</p>
+      <button class="heart-button" data-next="love" aria-label="Open surprise">💗</button>
+      <p class="hint">tap the heart</p>
+    </section>
+
+    <section class="screen" id="love">
+      <p class="eyebrow">ONE THING I WANT YOU TO KNOW</p>
+      <h1 class="script">I Love You</h1>
+      <p class="sub">More than these little words could ever explain.</p>
+      <button class="primary" data-next="gift">Continue <span>♡</span></button>
+    </section>
+
+    <section class="screen" id="gift">
+      <p class="eyebrow">A LITTLE GIFT</p>
+      <h1>Something made with love</h1>
+      <button class="gift-button" id="giftButton" aria-label="Open gift">
+        <span class="gift-bow">🎀</span><span class="gift-emoji">🎁</span>
+      </button>
+      <p class="hint">tap to unwrap</p>
+      <button class="primary hidden" id="giftContinue" data-next="memories">See what's inside <span>♡</span></button>
+    </section>
+
+    <section class="screen" id="memories">
+      <p class="eyebrow">OUR LITTLE WORLD</p>
+      <h1>Some moments, forever.</h1>
+      <p class="sub">A few memories that make me smile.</p>
+      <div class="gallery">
+        <img src="assets/photos/photo1.jpg" alt="Our memory one">
+        <img src="assets/photos/photo2.jpg" alt="Our memory two">
+        <img src="assets/photos/photo3.jpg" alt="Our memory three">
+        <img src="assets/photos/photo4.jpg" alt="Our memory four">
+        <img src="assets/photos/photo5.jpg" alt="Our memory five">
+        <img src="assets/photos/photo6.jpg" alt="Our memory six">
+      </div>
+      <button class="primary" data-next="letter">One more thing <span>♡</span></button>
+    </section>
+
+    <section class="screen" id="letter">
+      <p class="eyebrow">OPEN WHEN YOU NEED A SMILE</p>
+      <h1>A letter for you</h1>
+      <button class="envelope" id="envelope" aria-label="Open letter"><span>💌</span><small>tap to open</small></button>
+      <article class="letter-card hidden" id="letterCard">
+        <p>My favourite person,</p>
+        <p>
+          I don't always find the perfect words to tell you how special you are.
+          But I hope you never forget that you make ordinary days feel beautiful.
+          Thank you for being you, for the little moments, and for all the smiles.
+        </p>
+        <p>Here's to many more memories together.</p>
+        <p class="sign">With all my love, 💗</p>
+      </article>
+      <button class="primary hidden" id="letterContinue" data-next="voice">Listen to this <span>♡</span></button>
+    </section>
+
+    <section class="screen" id="voice">
+      <p class="eyebrow">A MESSAGE, IN MY VOICE</p>
+      <h1 class="script">Just for you</h1>
+      <p class="sub">A little voice note from me to you.</p>
+      <div class="audio-card">
+        <div class="audio-icon">🎧</div>
+        <p>My voice note</p>
+        <audio id="voiceNote" controls preload="metadata">
+          <source src="assets/audio/voice-note.mp3" type="audio/mpeg">
+          Your browser does not support audio.
+        </audio>
+        <small>Add your own voice-note.mp3 in the audio folder.</small>
+      </div>
+      <button class="primary" data-next="final">One last thing <span>♡</span></button>
+    </section>
+
+    <section class="screen" id="final">
+      <div class="final-heart">💗</div>
+      <p class="eyebrow">THAT'S NOT ALL…</p>
+      <h1 class="script">You are my favourite surprise.</h1>
+      <p class="sub">No matter how many pages I make, there will never be enough words for you.</p>
+      <p class="signature">Always yours ♡</p>
+      <button class="primary" id="replay">Experience it again</button>
+    </section>
+  </main>
+  <footer>MADE WITH ♡ JUST FOR YOU</footer>
+  <script src="script.js"></script>
+</body>
+</html>
